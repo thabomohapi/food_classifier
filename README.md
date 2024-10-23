@@ -59,10 +59,10 @@ The FastConvergenceResNet architecture includes several optimizations:
 
 | Metric | Value |
 |--------|--------|
-| Best Validation Accuracy | 86.41% |
-| Final Training Accuracy | 85.16% |
-| Final Validation Accuracy | 84.78% |
-| Training Time | ~2 hours on NVIDIA GPU |
+| Best Validation Accuracy | 81.93% |
+| Final Training Accuracy | 77.81% |
+| Final Validation Accuracy | 81.47% |
+| Training Time | ~9 hours on NVIDIA GeForce RTX 3050 GPU |
 
 ## Dataset 📸
 
