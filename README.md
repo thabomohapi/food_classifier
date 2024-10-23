@@ -24,6 +24,7 @@ cd food-classifier
 2. Build and run with Docker:
 ```bash
 docker build -t food_classifier .
+docker run --name food_classifier -p 5000:5000 food_classifier
 ```
 
 3. Open your browser and navigate to:
