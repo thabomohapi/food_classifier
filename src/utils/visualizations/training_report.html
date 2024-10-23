@@ -1,0 +1,52 @@
+
+        <html>
+        <head>
+            <title>Training Report - ResNet Flower Classification</title>
+            <style>
+                body {
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    margin: 0;
+                    padding: 20px;
+                    background-color: #f5f6fa;
+                }
+                .container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    background-color: white;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                }
+                h1, h2 {
+                    color: #2c3e50;
+                }
+                .metric-card {
+                    background-color: #f8f9fa;
+                    padding: 15px;
+                    border-radius: 5px;
+                    margin: 10px 0;
+                }
+                .highlight {
+                    color: #2980b9;
+                    font-weight: bold;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>ResNet Flower Classification - Training Report</h1>
+                
+                <h2>Training Summary</h2>
+                <div class="metric-card">
+                    <p>Best Validation Accuracy: <span class="highlight">81.93%</span></p>
+                    <p>Final Training Accuracy: <span class="highlight">77.81%</span></p>
+                    <p>Final Validation Accuracy: <span class="highlight">81.47%</span></p>
+                    <p>Total Epochs: <span class="highlight">50</span></p>
+                </div>
+                
+                <h2>Training Curves</h2>
+                <iframe src="training_curves.html" width="100%" height="800px" frameborder="0"></iframe>
+            </div>
+        </body>
+        </html>
+        
