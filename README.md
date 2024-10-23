@@ -74,7 +74,7 @@ The model is trained on a Food dataset containing 500+ classes which include:
 - carrot cake
 - etc...
 
-Download the dataset [here](https://www.kaggle.com/api/v1/datasets/download/kmader/food41).
+Click [here](https://www.kaggle.com/api/v1/datasets/download/kmader/food41) to download the dataset.
 
 ## Training Your Own Model 🏋️‍♂️
 
