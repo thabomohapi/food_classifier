@@ -9,7 +9,6 @@ from tqdm import tqdm
 import torch.backends.cudnn as cudnn
 
 from ..data.preprocessing import DataPreprocessor
-from ..model.resnet import ResNet
 from ..model.enhanced_resnet import EnhancedResNet
 
 def timing_decorator(func):
