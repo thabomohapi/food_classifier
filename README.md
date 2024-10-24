@@ -1,23 +1,26 @@
-# Food-Image Classifier with ResNet 🌸
+# Food-Image Classifier with ResNet
 
-A high-performance food classification system using an optimized ResNet architecture with enhanced attention mechanisms and efficient training strategies. This project provides both a trained model and a web interface for real-time food classification.
+A high-performance image classification model optimized for mobile and consumer GPUs. This implementation features an enhanced ResNet architecture with modern attention mechanisms, mobile-optimized blocks, and efficient training strategies.
 
-## Features ✨
+## Features
 
-- **Optimized ResNet Architecture**: Custom-designed for faster convergence and better accuracy
-- **Advanced Attention Mechanisms**: Incorporates CBAM (Convolutional Block Attention Module)
+- **Optimized ResNet Architecture**: Designed for faster convergence and good accuracy
+- **Efficient MBConv Blocks**: Memory-bandwidth optimized blocks with depthwise separable convolutions
+- **Advanced Stem**: Efficient early feature extraction with grouped convolutions
+- **Channel Shuffle Operations**: Efficient information flow between groups
+- **Feature Pyramid Design**: Multi-scale feature extraction with shared weights
 - **Memory Efficient**: Designed to run on consumer-grade GPUs
 - **Easy-to-use Web Interface**: Drag-and-drop interface for image classification
 - **Docker Support**: Ready to deploy with Docker and CUDA support
 - **Good Accuracy**: Achieves 82% validation accuracy on the Food dataset
 
-## Quick Start 🚀
+## Quick Start
 
 ### Using Docker (Recommended)
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/thabomohapi/flower-classifier.git
+git clone https://github.com/thabomohapi/food-classifier.git
 cd food-classifier
 ```
 
@@ -64,9 +67,9 @@ The FastConvergenceResNet architecture includes several optimizations:
 | Final Validation Accuracy | 82.06% |
 | Training Time | ~9 hours on NVIDIA GeForce RTX 3050 GPU |
 
-## Dataset 📸
+## Dataset
 
-The model is trained on a Food dataset containing 500+ classes which include:
+The model is trained on a Food dataset containing 99 classes which include:
 - cheesecake
 - cup_cakes
 - donuts
@@ -90,7 +93,7 @@ python -m src.model.training
 
 Training configurations can be modified in `src/model/training.py`.
 
-## API Usage 🔌
+## API Usage
 
 The model can be accessed through a REST API:
 
@@ -104,14 +107,14 @@ response = requests.post(url, files=files)
 predictions = response.json()
 ```
 
-## Requirements 📋
+## Requirements
 
 - Python 3.10
 - PyTorch 2.1.0
 - CUDA-capable GPU (optional but recommended)
 - See environment.yml for complete list
 
-## Troubleshooting 🔧
+## Troubleshooting
 
 ### Common Issues
 
@@ -127,6 +130,30 @@ batch_size = 16  # Default: 32
 # Check image is not corrupted
 ```
 
+## Technical Specifications
+
+- **Input Resolution**: 224x224 RGB images
+- **Base Channels**: 64 (progressively increasing to 512)
+- **Model Depth**: 3 stages with dual MBConv blocks each
+- **Attention Mechanism**: Squeeze-and-Excitation with reduced channels
+- **Activation Function**: SiLU (Swish) for mobile efficiency
+
+## Training Capabilities
+
+- One-Cycle learning rate scheduling
+- Label smoothing for better generalization
+- AdamW optimizer with weight decay
+- Gradient accumulation steps for stability
+- Mixed precision training with automatic scaling
+
+## Mobile GPU Optimizations
+
+- Mixed precision (FP16) support for reduced memory usage
+- Memory-efficient convolution operations
+- Optimized memory management with gradient accumulation
+- Regular cache clearing to prevent fragmentation
+- Configurable batch sizes for different GPU capabilities
+
 ### GPU Support
 
 To enable GPU support, ensure:
@@ -134,6 +161,6 @@ To enable GPU support, ensure:
 - NVIDIA drivers installed
 - CUDA toolkit installed
 
-## Contributing 🤝
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
