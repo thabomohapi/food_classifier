@@ -9,7 +9,7 @@ A high-performance food classification system using an optimized ResNet architec
 - **Memory Efficient**: Designed to run on consumer-grade GPUs
 - **Easy-to-use Web Interface**: Drag-and-drop interface for image classification
 - **Docker Support**: Ready to deploy with Docker and CUDA support
-- **High Accuracy**: Achieves 86.41% validation accuracy on the Food dataset
+- **Good Accuracy**: Achieves 82% validation accuracy on the Food dataset
 
 ## Quick Start 🚀
 
@@ -59,9 +59,9 @@ The FastConvergenceResNet architecture includes several optimizations:
 
 | Metric | Value |
 |--------|--------|
-| Best Validation Accuracy | 81.93% |
-| Final Training Accuracy | 77.81% |
-| Final Validation Accuracy | 81.47% |
+| Best Validation Accuracy | 82.22% |
+| Final Training Accuracy | 79.84% |
+| Final Validation Accuracy | 82.06% |
 | Training Time | ~9 hours on NVIDIA GeForce RTX 3050 GPU |
 
 ## Dataset 📸
@@ -111,21 +111,6 @@ predictions = response.json()
 - CUDA-capable GPU (optional but recommended)
 - See environment.yml for complete list
 
-## Development 👩‍💻
-
-1. Fork the repository
-2. Create your feature branch
-3. Install development dependencies:
-```bash
-conda env create -f environment.yml
-```
-4. Make your changes
-5. Run tests:
-```bash
-python -m pytest tests/
-```
-6. Submit a pull request
-
 ## Troubleshooting 🔧
 
 ### Common Issues
@@ -152,23 +137,3 @@ To enable GPU support, ensure:
 ## Contributing 🤝
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-
-## Citation 📚
-
-If you use this project in your research, please cite:
-
-```bibtex
-@software{food_classifier,
-  author = {Thabo Mohapi},
-  title = {Food-Image Classifier with ResNet},
-  year = {2024},
-  publisher = {GitHub},
-  url = {https://github.com/thabomohapi/food-classifier}
-}
-```
-
-## Acknowledgments 🙏
-
-- [PyTorch](https://pytorch.org/) team for the amazing framework
-- Original ResNet paper authors
-- Kaggle for the food dataset
