@@ -67,7 +67,7 @@ The FastConvergenceResNet architecture includes several optimizations:
 | Final Validation Accuracy | 82.06% |
 | Training Time | ~9 hours on NVIDIA GeForce RTX 3050 GPU |
 
-## Dataset 📸
+## Dataset
 
 The model is trained on a Food dataset containing 500+ classes which include:
 - cheesecake
