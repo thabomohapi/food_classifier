@@ -171,7 +171,8 @@ class DatasetLoader:
 
 if __name__ == "__main__":
     # dataset_url = "https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz"
-    dataset_url = "https://www.kaggle.com/api/v1/datasets/download/kmader/food41"
+    # dataset_url = "https://www.kaggle.com/api/v1/datasets/download/kmader/food41"
+    dataset_url = open("../data/dataset_url.txt", "r").read()
     loader = DatasetLoader(dataset_url)
     
     # Download and extract
