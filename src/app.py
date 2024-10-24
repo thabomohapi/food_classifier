@@ -15,17 +15,13 @@ data_dir = "data/processed"
 dir = Path(data_dir)
 
 def get_class_names():
-    """Get list of class names"""
-    train_dir = dir / "train"
-    if not train_dir.exists():
-        return []
-    return sorted([d.name for d in train_dir.iterdir() if d.is_dir()])
+    return open("data/class_names.txt", "r").read()
 
 def load_model():
     """Load and configure the model"""
     try:
         # Model configuration
-        class_names = get_class_names()
+        class_names = get_class_names().split(", ")
         model = EnhancedResNet(num_classes=len(class_names))
         
         # Load model weights
