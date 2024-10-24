@@ -35,5 +35,8 @@ RUN conda init bash
 # Set the entrypoint to use conda environment
 ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "food_classifier"]
 
+# Allow the image to execute the script
+RUN chmod +x dist/run.sh
+
 # Set the default command
-CMD ["python", "-m", "src.app"]
+CMD ["./dist/run.sh"]
