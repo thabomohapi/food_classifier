@@ -2,7 +2,7 @@
 
 A high-performance food classification system using an optimized ResNet architecture with enhanced attention mechanisms and efficient training strategies. This project provides both a trained model and a web interface for real-time food classification.
 
-## Features ✨
+## Features
 
 - **Optimized ResNet Architecture**: Custom-designed for faster convergence and better accuracy
 - **Advanced Attention Mechanisms**: Incorporates CBAM (Convolutional Block Attention Module)
@@ -111,7 +111,7 @@ predictions = response.json()
 - CUDA-capable GPU (optional but recommended)
 - See environment.yml for complete list
 
-## Troubleshooting 🔧
+## Troubleshooting
 
 ### Common Issues
 
