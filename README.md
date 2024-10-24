@@ -1,4 +1,4 @@
-# Food-Image Classifier with ResNet 🌸
+# Food-Image Classifier with ResNet
 
 A high-performance food classification system using an optimized ResNet architecture with enhanced attention mechanisms and efficient training strategies. This project provides both a trained model and a web interface for real-time food classification.
 
@@ -11,7 +11,7 @@ A high-performance food classification system using an optimized ResNet architec
 - **Docker Support**: Ready to deploy with Docker and CUDA support
 - **Good Accuracy**: Achieves 82% validation accuracy on the Food dataset
 
-## Quick Start 🚀
+## Quick Start
 
 ### Using Docker (Recommended)
 
@@ -45,7 +45,7 @@ conda activate food_classifier
 python -m src.app
 ```
 
-## Model Architecture 🧠
+## Model Architecture
 
 The FastConvergenceResNet architecture includes several optimizations:
 
@@ -64,7 +64,7 @@ The FastConvergenceResNet architecture includes several optimizations:
 | Final Validation Accuracy | 82.06% |
 | Training Time | ~9 hours on NVIDIA GeForce RTX 3050 GPU |
 
-## Dataset 📸
+## Dataset
 
 The model is trained on a Food dataset containing 500+ classes which include:
 - cheesecake
@@ -90,7 +90,7 @@ python -m src.model.training
 
 Training configurations can be modified in `src/model/training.py`.
 
-## API Usage 🔌
+## API Usage
 
 The model can be accessed through a REST API:
 
@@ -104,7 +104,7 @@ response = requests.post(url, files=files)
 predictions = response.json()
 ```
 
-## Requirements 📋
+## Requirements
 
 - Python 3.10
 - PyTorch 2.1.0
@@ -134,6 +134,6 @@ To enable GPU support, ensure:
 - NVIDIA drivers installed
 - CUDA toolkit installed
 
-## Contributing 🤝
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
