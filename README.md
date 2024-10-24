@@ -69,7 +69,7 @@ The FastConvergenceResNet architecture includes several optimizations:
 
 ## Dataset
 
-The model is trained on a Food dataset containing 500+ classes which include:
+The model is trained on a Food dataset containing 99 classes which include:
 - cheesecake
 - cup_cakes
 - donuts
