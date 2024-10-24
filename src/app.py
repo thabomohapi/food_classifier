@@ -160,7 +160,7 @@ def create_app(test_config=None):
         # Load production config
         app.config.update(
             MAX_CONTENT_LENGTH=16 * 1024 * 1024,  # 16MB max file size
-            UPLOAD_EXTENSIONS=['.jpg', '.jpeg', '.png'],
+            UPLOAD_EXTENSIONS=['.jpg', '.jpeg', '.png', '.webp'],
             DEBUG=False
         )
     else:

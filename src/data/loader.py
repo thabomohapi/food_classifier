@@ -170,8 +170,6 @@ class DatasetLoader:
             shutil.rmtree(images_dir)
 
 if __name__ == "__main__":
-    # dataset_url = "https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz"
-    # dataset_url = "https://www.kaggle.com/api/v1/datasets/download/kmader/food41"
     dataset_url = open("data/dataset_url.txt", "r").read()
     loader = DatasetLoader(dataset_url)
     
@@ -189,12 +187,3 @@ if __name__ == "__main__":
             print("Failed to organize dataset")
     else:
         print("Failed to download or extract dataset")
-
-# if __name__ == "__main__":
-#     # dataset_url = "https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz"
-#     dataset_url = "https://www.kaggle.com/api/v1/datasets/download/kmader/food41"
-#     loader = DatasetLoader(dataset_url)
-#     loader.download_and_extract()
-#     loader.organize_dataset()
-#     print("Class names:", loader.get_class_names())
-#     print("Dataset statistics:", loader.get_dataset_stats())
